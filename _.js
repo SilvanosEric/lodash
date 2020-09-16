@@ -26,6 +26,27 @@ const _ = {
     },
     words(string) {
         return string.split(' ');
+    },
+    pad(string, length) {
+        let spacesBefore = '';
+        let spacesAfter = '';
+        let words = '';
+        toAdd = length - string.length;
+        if (toAdd <= 0) {
+            words = string;
+            return words;
+        }
+        if (toAdd % 2 != 0) { // Amount of spacing to be added is odd
+            words = words.concat(`${string} `);
+            toAdd--;
+        } else {
+            words = string;
+        }
+        for(let i = 1; i <= toAdd/2; i++) {
+            spacesBefore = spacesBefore.concat(' ');
+            spacesAfter = spacesAfter.concat(' ');
+        }
+        return spacesBefore.concat(words, spacesAfter);
     }
 };
 
