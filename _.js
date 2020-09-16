@@ -54,6 +54,13 @@ const _ = {
         } else {
             return true;
         }
+    }, invert(object) {
+        let invertedObject = {};
+        for (const key in object) {
+            let keyValue = object[key];
+            invertedObject[keyValue] = key;
+        }
+        return invertedObject;
     }
 };
 
