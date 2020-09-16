@@ -9,7 +9,7 @@ const _ = {
         }
     },
     inRange(number, startValue, endValue) {
-        if (typeof endValue === 'undefined') {
+        if (endValue === undefined) {
             endValue = startValue;
             startValue = 0;
         }
@@ -47,6 +47,13 @@ const _ = {
             spacesAfter = spacesAfter.concat(' ');
         }
         return spacesBefore.concat(words, spacesAfter);
+    },
+    has(object, key) {
+        if (object[key] === undefined) {
+            return false;
+        } else {
+            return true;
+        }
     }
 };
 
