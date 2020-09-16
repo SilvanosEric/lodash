@@ -1,4 +1,6 @@
+// The object below stored in the _ variable will represent our library containing all the functionality we add to it
 const _ = {
+    // Number methods
     clamp(number, lowerBound, upperBound) {
         if (number < lowerBound) {
             return lowerBound;
@@ -24,6 +26,7 @@ const _ = {
             return false;
         }
     },
+    // String methods
     words(string) {
         return string.split(' ');
     },
@@ -48,6 +51,7 @@ const _ = {
         }
         return spacesBefore.concat(words, spacesAfter);
     },
+    // Object methods
     has(object, key) {
         if (object[key] === undefined) {
             return false;
@@ -72,6 +76,7 @@ const _ = {
         }
         return undefined;
     }
+    // Array methods
 };
 
 
