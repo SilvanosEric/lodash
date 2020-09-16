@@ -23,6 +23,9 @@ const _ = {
         } else if (number < startValue || number >= endValue) {
             return false;
         }
+    },
+    words(string) {
+        return string.split(' ');
     }
 };
 
