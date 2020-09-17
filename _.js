@@ -45,7 +45,7 @@ const _ = {
         } else {
             words = string;
         }
-        for(let i = 1; i <= toAdd/2; i++) {
+        for (let i = 1; i <= toAdd / 2; i++) {
             spacesBefore = spacesBefore.concat(' ');
             spacesAfter = spacesAfter.concat(' ');
         }
@@ -58,7 +58,8 @@ const _ = {
         } else {
             return true;
         }
-    }, invert(object) {
+    },
+    invert(object) {
         let invertedObject = {};
         for (const key in object) {
             let keyValue = object[key];
@@ -75,8 +76,16 @@ const _ = {
             }
         }
         return undefined;
-    }
+    },
     // Array methods
+    drop(array, n) {
+        if (n === undefined) {
+            n = 1;
+        }
+        copyOfArray = array;
+        copyOfArray.splice(0, n);
+        return copyOfArray;
+    }
 };
 
 
