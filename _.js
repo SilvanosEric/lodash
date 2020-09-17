@@ -85,6 +85,15 @@ const _ = {
         copyOfArray = array;
         copyOfArray.splice(0, n);
         return copyOfArray;
+    },
+    dropWhile(array, predicate) {
+        copyOfArray = array;
+        for (let i = 0; i < copyOfArray.length; i++) {
+            if (predicate(copyOfArray[i], i, copyOfArray)) {
+                copyOfArray.shift();
+            }
+        }
+        return copyOfArray;
     }
 };
 
