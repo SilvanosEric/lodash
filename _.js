@@ -94,6 +94,18 @@ const _ = {
             }
         }
         return copyOfArray;
+    },
+    chunk(array, n) {
+        copyOfArray = array;
+        arrayChunks = [];
+        if (n === undefined) {
+            n = 1;
+        }
+        while(copyOfArray.length != 0) {
+            block = copyOfArray.splice(0,n);
+            arrayChunks.push(block);
+        }
+        return arrayChunks;
     }
 };
 
